@@ -65,27 +65,34 @@
 // Задача 38: Задайте массив вещественных чисел. Найдите разницу между 
 // максимальным и минимальным элементов массива. [3 7 22 2 78] -> 76
 Console.Write("Введите размер массива: ");
-int n = Convert.ToInt32(Console.ReadLine()!);
-int[] mass = new int[n];
-Console.WriteLine($"В массиве состоящем из {n} элементов, а именно в: [{String.Join(", ", (mass))}]");
+int size = int.Parse(Console.ReadLine()!);
+int[] num = newRandom(size);
+int count = 0;
 
-int[] newRandom(int n)
+Console.WriteLine($"В массиве {size} элементов, а именно в массиве: [{String.Join(", ", (num))}]");
+
+int[] newRandom(int size)
 {
-    int[] mass = new int[n];
-    for (int i =0; i < n; i++)
+    int[] array = new int[size];
+    for (int i =0; i< array.Length; i++)
     {
-        mass[i] = new Random().Next(100, 1000);
+        array[i] = new Random().Next(100, 1000);
     }
-    return mass;
+    return array;
+}
+
+int max = 0;
+foreach (int i in num)  // Оператор foreach: перечисляет элементы коллекции и 
+                         // выполняет тело для каждого элемента коллекции.
+{
+    if (max < i) max = i;
 }
 
 int min = 0;
-int max = 0;
-foreach (int i in mass)  // Оператор foreach: перечисляет элементы коллекции и 
-                        // выполняет тело для каждого элемента коллекции.
+foreach (int i in num)
 {
-    if (min > i) min = i;
-    if (max < i) max = i;
+if (min > i); 
+    min = i;
 }
 Console.WriteLine($"Максимальное значение = {max}, минимальное значение = {min}");
 Console.WriteLine($"Разница между максимум и минимум: {max - min}");

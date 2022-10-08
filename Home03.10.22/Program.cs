@@ -9,7 +9,7 @@ int size = int.Parse(Console.ReadLine()!);
 int[] num = newRandom(size);
 int count = 0;
 
-Console.WriteLine($"В массиве состоящем из {size} элементов, а именно в массиве: [{String.Join(", ", newRandom(size))}]");
+Console.WriteLine($"В массиве {size} элементов, а именно в массиве: [{String.Join(", ", (num))}]");
 
 int[] newRandom(int size)
 {

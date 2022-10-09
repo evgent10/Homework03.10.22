@@ -83,8 +83,8 @@ int[] newRandom(int size)
 
 for ( int j = 0; j < num.Length; j++ ) 
 {
-     if (max < j) max = j;
-     if (min > j) min = j;    
+     if (max < num[j]) max = num[j];
+     if (min > num[j]) min = num[j];    
 }
                          
 Console.WriteLine($"Максимальное значение = {max}, минимальное значение = {min}");

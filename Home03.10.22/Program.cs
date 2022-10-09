@@ -67,9 +67,9 @@
 Console.Write("Введите размер массива: ");
 int size = int.Parse(Console.ReadLine()!);
 int[] num = newRandom(size);
-int count = 0;
-
-Console.WriteLine($"В массиве {size} элементов, а именно в массиве: [{String.Join(", ", (num))}]");
+int max = 0;
+int min = 0;
+Console.WriteLine($"В массиве из {size} элементов: [{String.Join(", ", (num))}]");
 
 int[] newRandom(int size)
 {
@@ -81,20 +81,11 @@ int[] newRandom(int size)
     return array;
 }
 
-int max = 0;
-foreach (int i in num)  // Оператор foreach: перечисляет элементы коллекции и 
-                         // выполняет тело для каждого элемента коллекции.
+for ( int j = 0; j <= num.Length; j++ ) 
 {
-    if (max < i) max = i;
+     if (max < j) max = j;
+     if (min > j) min = j;    
 }
-
-int min = 0;
-foreach (int i in num)
-{
-if (min > i); 
-    min = i;
-}
+                         
 Console.WriteLine($"Максимальное значение = {max}, минимальное значение = {min}");
 Console.WriteLine($"Разница между максимум и минимум: {max - min}");
-
-    

@@ -68,7 +68,7 @@ Console.Write("Введите размер массива: ");
 int size = int.Parse(Console.ReadLine()!);
 int[] num = newRandom(size);
 int max = 0;
-int min = 0;
+int min = 1000;
 Console.WriteLine($"В массиве из {size} элементов: [{String.Join(", ", (num))}]");
 
 int[] newRandom(int size)

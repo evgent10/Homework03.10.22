@@ -81,7 +81,7 @@ int[] newRandom(int size)
     return array;
 }
 
-for ( int j = 0; j <= num.Length; j++ ) 
+for ( int j = 0; j < num.Length; j++ ) 
 {
      if (max < j) max = j;
      if (min > j) min = j;    
